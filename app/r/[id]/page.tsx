@@ -59,8 +59,8 @@ export default function ReviewPage() {
         {business.logo_url && (
           <img src={business.logo_url} alt={business.name} style={styles.logo} />
         )}
-        <h1 style={styles.businessName}>{business.name}</h1>
-        <p style={styles.question}>{business.custom_question}</p>
+                <h1 style={styles.businessName}>{business.name}</h1>
+        {!submitted && <p style={styles.question}>{business.custom_question}</p>}
 
         {!submitted ? (
           <>
