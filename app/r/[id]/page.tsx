@@ -28,13 +28,18 @@ export default function ReviewPage() {
     loadBusiness()
   }, [businessId])
 
-  async function handleSubmit() {
+    async function handleSubmit() {
     await supabase.from('feedback').insert({
       business_id: businessId,
       rating: rating,
       comment: comment,
     })
-    setSubmitted(true)
+
+    if (rating >= 4) {
+      window.location.href = business.google_review_url
+    } else {
+      setSubmitted(true)
+    }
   }
 
   if (loading) {
