@@ -172,7 +172,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     padding: '0 4px',
     transition: 'color 0.15s',
   },
-  textarea: {
+    textarea: {
     width: '100%',
     minHeight: 90,
     padding: 12,
@@ -183,6 +183,9 @@ const styles: { [key: string]: React.CSSProperties } = {
     fontFamily: 'inherit',
     resize: 'vertical',
     boxSizing: 'border-box',
+    color: '#1A1A1A',
+    background: '#FFFFFF',
+    colorScheme: 'light',
   },
   submitButton: {
     width: '100%',
